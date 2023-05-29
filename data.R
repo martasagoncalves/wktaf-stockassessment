@@ -50,8 +50,8 @@ surveys <- read.ices.taf("survey.dat")
 #####   2 Preprocess data   ############################################################################################
 
 # landings
-latage <- catage * landfrac[, -1]
-datage <- catage * (1 - landfrac[, -1])
+latage <- catage * landfrac
+datage <- catage * (1 - landfrac)
 
 # put surveys in seperate matrices (for writing out)
 survey_summer <- surveys[[1]]
@@ -77,13 +77,13 @@ dat <- setup.sam.data(
   residual.fleet = catage,
   prop.mature = maturity,
   stock.mean.weight = wstock,
-  catch.mean.weight = wcatch[, -1],
-  dis.mean.weight = wdiscards[, -1],
-  land.mean.weight = wlandings[, -1],
+  catch.mean.weight = wcatch,
+  dis.mean.weight = wdiscards,
+  land.mean.weight = wlandings,
   prop.f = propf,
   prop.m = propm,
   natural.mortality = natmort,
-  land.frac = landfrac[, -1]
+  land.frac = landfrac
 )
 
 save(dat, file = "data/data.RData")

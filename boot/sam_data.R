@@ -1,4 +1,4 @@
-sam_assessment <- "WBCod_2021_cand01"
+sam_assessment <- "Cod_27_5b1"
 
 sam_dir <-
   paste0(

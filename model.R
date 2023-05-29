@@ -26,7 +26,6 @@ par <- defpar(dat, conf)
 
 # fit model
 fit <- sam.fit(dat, conf, par)
-#here i get an error, and cannot continue with TAF analysis
 
 # retrospective fits
 retro_fit <- retro(fit, year = 5)
